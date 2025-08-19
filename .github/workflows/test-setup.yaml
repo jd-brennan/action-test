@@ -1,0 +1,17 @@
+name: 'Action Setup'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  action-setup-steps:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Install Docker Compose v2
+        run: |
+          cat /etc/*release*
+          docker version
